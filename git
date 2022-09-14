@@ -1,0 +1,101 @@
+pwd - 현제 git을 사용하는 위치
+cd ?(파일명) - 현제 위치에서 하위 ??? 파일로 이동
+cd .. - 현제 위치에서 상위 파일로 이동
+git config --global user.name ?(닉네임) - 관리자명 설정
+git config --global user.email ?(email) - 관리자 이메일 설정
+mkdir - 현제 위치에서 신규 폴더 생성
+rm ?(파일명) 입력한 파일 삭제
+cp ?(파일명.확장자) ?(파일명.확장자) - 복사하기
+ls -a1 - 현제 위치에 있는 모든 파일명 및 git 저장장소(버전) 확인
+git init - 현제 위치에 git 저장소를 초기화
+git init ?(파일명) - 지정한 파일을 지역 저장소로 만듬
+git init --bare --?(파일명) - 지정한 파일을 광역 저장소로 만듬
+git push - 지역저장소에서 광역저장소에 업로드할때 사용
+git push --set-upstream origin master - 오리진의 마스터로 push 한다
+git ?(광역저장소이름) add origin ?(광역저장소주소) - 지역저장소에서 push 했을때 광역 저장소에 저장될수있게 만듬
+git ?(광역저장소이름) -v 광역저장소가 재대로 지정이 되었는지 확인 가능
+git ?(광역저장소이름) remove origin - 광역저장소 삭제
+vim ?(파일명.확장자) - 현제 위치에 파일 생성 [ vim 으로 들어갔을때 i(insert) / esc(입력취소) / :wq(vim저장 및 나가기) ]
+cat ?(파일명.확장자) - 해당 파일의 내용 확인
+git status - 관리(commit)가 되고 있는 또는 관리가 되지 않은 파일 확인 / untracked / new / modified / 초록은 commit 대기 상태
+git add ?(파일명.확장자)  - git이 해당 파일을 관리
+git commit - vim화면에서 변화(commit)되는 파일이 왜 변경되었는지를 메모(version메세지/commit메세지) / commit 대기상태만 commit함
+git log - git 버전 확인 ( 버전을 작성한 사람과 이메일, 시간, commit 주소 )
+git log -p - 각각의 commit과 commit 사이의 변경점 확인
+git log ?(commit 주소) - 해당 commit의 이전 commit확인
+git diff ?(commit 주소)..?(commit 주소) - 해당commit사이의 변경점 확인
+git diff - 이전 수정한 파일의 변경점 확인 ( 수정한 파일 리뷰 )
+git diff ?(가지이름)..?(가지이름) 가지 사이에 다른점 확인
+git reset ?(commit 주소) --hard - 해당 commit 주소가 최신 버전이 된다( 이전 버전은 삭제 )
+git reset --hard 모든 대상을 삭제
+git reset --mixed add와 commit 한 대상을 삭제
+git reset --soft commit한 대상을 삭제
+git reset --hard ORIG_HEAD - 모든 대상의 리셋을 취소함
+git reset --mixed ORIG_HEAD - add와 commit 한 대상의 리셋을 취소함
+git reset --soft ORIG_HEAD - commit한 대상의 리셋을 취소함
+git commit -a - 수정한 파일 또는 삭제한 파일에 대해서 git add의 절차를 밟지 않아도 commit하는 방법3
+git commit -m ?(git버전메모) - commit 대시 상태의 파일들을 vim에 접속하는 절차를 거치지 않고 수행하는법
+git commit -am "?(git버전메모)" - git add 절차와 vim에 접속하는 절차를 한번에 수행하는 방법
+git commit --help  commit관련 라이브러리
+git commit --amend - commit 메모를 변경할때 사용
+git branch - 원본가지와 고객사 등의 가지를 분리할때 사용하며 어떠한 가지가 있는지 보여줌
+git branch ?(이름) - 가지를 분리하여 사용할 이름을 정하고 현제가지의 내용을 그대로 복사해서 사용
+git branch -d ?(가지이름) - 입력한 가지를 삭제한다
+git checkout ?(가지이름) - 현제 가지에서 정한 가지로 변경 ( 또는 태크 버전을 입력해서 변경 가능 )
+git checkout -b ?(가지이름) - 새로운 가지를 만들면서 정한 가지로 변경까지 한번에 수행
+git checkout ?(commit주소값) - 커밋에 대해서 분석할때 사용
+git log --branches -- decorate ( 커밋된 branch들을 보여줌 / 현제 git버전은 git log --branches만 쳐도 자동으로 보여줌 )
+git log --branches -- decorate --graph - 죄측에 빨간줄로 연결점을 보여줌
+git log --branches -- decorate --graph --online - 그래프보다 좀더 간결하게 연결점을 보여줌
+git log ?(가지이름)..?(가지이름) - 첫번째가지에는 없고 두번째가지에는 있는 커밋을 보여줌
+git log -p ?(가지이름)..?(가지이름) - 첫번째가지에는 없고 두번째가지에는 있는 커밋과 변경 데이터를 보여줌
+git merge ?(가지이름) - 입력한 가지를 현제 접속중인 가지에 합친다
+git stash --help - stash 도움말 보기
+git stash - commit을 하기전의 수정중인 파일을 숨김처리 시킴 ( stash를 따로 삭제 하지 않으면 list에 남아 있음 )( 버전 관리되고 있는 파일만 가능)
+git stash apply - 숨겨둔 파일을 복원시킴 ( stash list에 숫자가 재일 낮은 리스트 순서상 재일 위의 WIP를 복원함 )
+git stash list - stash list를 보여줌 ( 재일 최근에 숨겨둔 파일이 위에 나오고 숫자가 재일 낮다 )
+git stash drop - list 중에서 가장 최신 WIP를 삭제한다
+git stash apply; git stash drop; - 최신 WIP를 복원하면서 list에서 삭제시킴
+git stash pop - ( git stash apply; git stash drop; ) 의 단축키
+git reflog - 중요 시점을 위주로 로그를 저장함 ( 이걸 가지고 리셋 특정 리셋 시점을 정할수있음 )
+git config --global merge.tool kdiff3 -  merge할 때 사용하는 툴
+git clone ?(원격저장소의주소값) ?(저장할장소이름) - github에서 가져온 원격저장소를 지역저장소에 가져오는 방법
+git log --reverse - 로그를 역순으로 보여줌
+git remote add origin https://github.com/TwoSharkbaby/capter01.git - 지역저장소에 원격저장소remote를 연결시키고 주소가 길어서 origin이라고
+                                                                                     별칭을 붙여서 사용한다
+git branch -M main - github 만드는 순서중 두번째
+git push -u origin main - github 만드는 순서중 세번째이자 git push 을 사용하여 업로드 시킨다
+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 - 토큰 값
+git remote - 원격저장소가 있는지 보여줌
+git remote -v - 원격저장소에 있는 별칭들의 주소를 알려줌
+git remote remove ?(별칭) - 별칭을 삭제할때 사용함
+git pull - 두개의 작업 공간에서 한곳에 작업이 끝나 업로드하고 다른 작업 공간에서 동기화 할때 사용한다
+git tag ?(버전입력) master - 태크붙이기 / 특정 커밋에 태그를 달아서 공유 등을 할 때 사용한다
+git tag -a(버전입력) -m "?(버전에대한설명입력)" - 테그에 대한 정보를 입력 가능
+git tag -v(버전입력) - 테그에 대한 내용 확인 가능
+git push --tags - 테그를 광역저장소에 저장 ( 일반적인 push는 테그는 저장하지 않음 )
+git tag -d ?(버전입력) - 입력한 테크 삭제
+
+working / directory / working tree / working copy - add 가 되지 않은 상태
+index / staging area / cache - add가 된 상태
+repository / history / terr - commit이 된 상태
+
+이론 원리 ( add )
+index는 object 번호와 파일 이름을 가지고 있다. object는 파일 내용을 가지고 있다
+object의 내용이 같다면 index의 파일 이름을 달라도 가르키는 object 번호는 동일하다
+
+커밋 원리 ( commit )
+commit을 하면 commit한 닉네임과 이메일이 있음
+object의 내용에는 정보값을 가지고 있는 blob이 있고 그 blob들을 묶는 tree다. commit은 각각의 tree를 가지고 있음
+
+스테이터스 ( status )
+object의 내용과 index의 내용이 다르다면 알아려줌
+
+pull vs fetch 동기화 비교
+pull은 지역저장소의 마스터가 향하는 커밋이 광역저장소의 오리진이 향하는 커밋과 동일하게 동기화 시킴
+fetch는 지역저장소의 마스터가 향하는 커밋에서 새로운 커밋을 하나 만들어 광역저장소의 오리진이 향하게함
+          이후 merge 를 통해서 동일하게 동기화를 시킴 ( pull 보다 번거롭지만 동일하게 동기화 전에 내용을 한번더 체크 가능함 )
+
+merge vs rebase 병합 비교
+merge는 가지는 그대로 두고 새로운 커밋을 만들어서 병합함
+rebase는 합치고 싶은 가지의 최신 커밋에 접속한 가지의 이전 base를 변경해서 하나의 가지로 만들어서 병합함
