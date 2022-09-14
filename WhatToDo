@@ -10,6 +10,4 @@ Git 기본 사용법 정리
 
 관계형데이터베이스 Oracle https://www.youtube.com/watch?v=pGlkIFrY9QY&list=PLq8wAnVUcTFVq7RD1kuUwkdWabxvDGzfu
 
-데이터 레플리케이션 / 샤딩 전략 / CAP 이론 정리
-
 ORM / ACID / 트랜잭션 / N+1 문제 / 정규화 / 인덱스와 작동 방식 
