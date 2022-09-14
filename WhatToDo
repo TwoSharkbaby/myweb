@@ -1,3 +1,17 @@
-데이터베이스 ( 관계형 / 비관계형 )
-관계형 오라클
-비관계형 망고
+POSIX 기초 정리
+
+입출력(I/O) 관리 공부 및 정리
+
+Git 기본 사용법 정리
+
+버전관리와 하는 이유 정리
+
+깃허브 사용 정리
+
+NoSQL 데이터베이스 몽고DB https://www.youtube.com/watch?v=2boOF8zndns&list=PL9mhQYIlKEheyXIEL8RQts4zV_uMwdWFj&index=1
+
+관계형데이터베이스 Oracle https://www.youtube.com/watch?v=pGlkIFrY9QY&list=PLq8wAnVUcTFVq7RD1kuUwkdWabxvDGzfu
+
+데이터 레플리케이션 / 샤딩 전략 / CAP 이론 정리
+
+ORM / ACID / 트랜잭션 / N+1 문제 / 정규화 / 인덱스와 작동 방식
