@@ -1,7 +1,7 @@
 정규식 표현 Regular Expressions
 
 http://zvon.org/comp/r/tut-Regexp.html#Pages~Contents	정규식 표현 규정 사이트
-https://regexr.com/	정규식 테스트 및  사이트
+https://regexr.com/	정규식 테스트 및 퀴즈 사이트
 
 1~2. 대소문자와 띄어쓰기, 특수문자 구별함 / \^나 \$는 정규식표현이 아닌 단순 특수문자
 3. who is who / ^who / who 로 시작하는 모든 문자열
