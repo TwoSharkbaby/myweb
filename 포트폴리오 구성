@@ -1,3 +1,5 @@
+개요
+
 개발환경
 OS WINDOW10
 DATABACD MYSQL 8.0.30
@@ -7,4 +9,8 @@ SPRING SPRING FRAME 5.2.7
 IDE STS 3.9.18(ECLIPSE 2021-09)
 
 시스템구성도
-플로우차트로 화면구성흐름도를 구성
+플로우차트등으로 시스템 구성 흐름도를 구성
+
+ERD
+
+스토리보드
