@@ -1,6 +1,6 @@
-개요
+1.개요
 
-개발환경
+2.개발환경
 OS WINDOW10
 DATABACD MYSQL 8.0.30
 WAS TOMCAT 9.0.68
@@ -8,9 +8,12 @@ JAVA JDK 11.0.18
 SPRING SPRING FRAME 5.2.7
 IDE STS 3.9.18(ECLIPSE 2021-09)
 
-시스템구성도
+3.시스템구성도
 플로우차트등으로 시스템 구성 흐름도를 구성
 
-ERD
+4.ERD
+MYSQL BENCH ERD / https://www.erdcloud.com/
+필요하다면 상세내용(각 테이블의 컬럼 세부내용)까지 추가
 
-스토리보드
+5.스토리보드
+UI를 보여주면서 각각의 기능과 흐름을 기록
